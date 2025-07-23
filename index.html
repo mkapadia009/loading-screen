@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loading - Svastiya</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background: black;
+    }
+
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      background: rgba(0, 0, 0, 0.2); /* Optional tint */
+    }
+
+    .slogan {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .loading-bar-container {
+      width: 80%;
+      max-width: 400px;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .loading-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #00d4ff, #00ffa3);
+      animation: loadBar 3s ease-in-out forwards;
+    }
+
+    @keyframes loadBar {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+
+    @media (max-width: 600px) {
+      .slogan {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+
+  <!-- Optional redirect -->
+  <script>
+    setTimeout(() => {
+      window.location.href = "https://svastiya.com";
+    }, 12000);
+  </script>
+</head>
+<body>
+  <video src="SVASTIYA LOGO_V3.mp4" autoplay muted loop playsinline></video>
+
+  <div class="overlay">
+    <div class="slogan">Empowering Possibilities, One Moment at a Time</div>
+    <div class="loading-bar-container">
+      <div class="loading-bar"></div>
+    </div>
+  </div>
+</body>
+</html>
